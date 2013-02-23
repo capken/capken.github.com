@@ -1,31 +1,11 @@
 ---
-title: links
+title: 品牌库-电子商城
 layout: page
 ---
-
-**[喵镇](http://heysuei.me)**  
-
----
- 
-[Beautifully Imperfect](http://becky.im)  
-[D&amp;V](http://kaix.in/daddy)  
-[fairystreet](http://fairystreet.com)  
-[Luke](http://geeklu.com)  
-[ifireyy](http://fireyy.com)  
-[Mirageyard.com](http://www.mirageyard.com)  
-[Scor Gryu](http://gryu.net)  
-[Shellexy](http://shellexy.info)  
-[傳習錄](http://chuanxilu.com)  
-[冰古](http://bingu.net)  
-[双霍记](http://imhuo.com)  
-[唯音乐](http://vinmusic.com)  
-[崇智的BLOG](http://blog.sina.com.cn/chongzhi)  
-[很平靜](http://a4114.net)  
-[旋转木马の阶梯](http://boke.name/citizen)  
-[杀手爱喝牛奶](http://arsun.me)  
-[浮黑说话](http://surdark.net)  
-[瘋来坊](http://flyku.ro)  
-[睡到25点](http://www.voidman.com)  
-[辞不达意](http://joyus.org)  
-
-*# sort -f*
+[![京东商城](/media/files/shops/360buy.png)](http://www.360buy.com/)
+[![易迅网](/media/files/shops/51buy.png)](http://51buy.com/)
+[![新蛋中国](/media/files/shops/newegg1.png)](http://www.newegg.com.cn/)
+[![1号店](/media/files/shops/yihaodian.png)](http://www.yihaodian.com/)
+[![当当网](/media/files/shops/dangdang.png)](http://www.dangdang.com/)
+[![天猫](/media/files/shops/tmall.png)](http://www.tmall.com/)
+[![苏宁易购](/media/files/shops/suning.png)](http://www.suning.com/)
