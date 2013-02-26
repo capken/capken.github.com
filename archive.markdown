@@ -1,5 +1,5 @@
 ---
-title: archive
+title: 品牌库-所有文章
 layout: page
 ---
 

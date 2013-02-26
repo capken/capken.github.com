@@ -1,5 +1,5 @@
 ---
-title: tags
+title: 品牌库-所有标签
 layout: page
 ---
 
