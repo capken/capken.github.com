@@ -1,8 +1,7 @@
 ---
 title: 思乐 - Schleich
 layout: post
-tags:
-  - 玩具
+tags: [玩具, 德国]
 ---
 
 ![schleich logo](http://pinpaiku.org/media/files/2013/03/01/schleich_logo.jpg)
