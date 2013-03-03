@@ -3,4 +3,4 @@ pygments: true
 permalink: /:year/:month/:day/:title.html
 name: 品牌库
 markdown: rdiscount
-paginate: 5
+paginate: 3

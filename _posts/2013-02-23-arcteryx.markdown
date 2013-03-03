@@ -1,7 +1,14 @@
 ---
 title: 始祖鸟 - Arc'teryx
 layout: post
-tags: [户外运动, 加拿大]
+tags:
+  - 户外运动
+  - 加拿大
+links:
+  theta_ar : http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB07S4%2FK0CFcRfH0GoT805sipKjwignAH%2FBsKt6X2bTJtefVf%2BZXc3ofM5LVuG%2Bphkl4KmsnU4oKGosRxWTRBldCJ%2FcA4%2F%2FVig%3D%3D
+  gamma_mx: http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB07S4%2FK0CFcRfH0GoT805sipKjwignAH%2FiTSEpAn3hDBatw3Ufje%2BnsNIRvdEEzhJCU%2FW%2B23HNxdCEh8zJo60zmiMHn0si3Pg%3D%3D
+  arcteryx_sanfu: http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB04MQzdgG3VSuWRI1IF3n%2FzhW5Dsj2wAMKMm1CALAVwJp3l%2FDydL150yH4Lh9ZyAC2MTkgNhLaNlyU%3D
+  arcteryx_amazon_cn: http://www.amazon.cn/s/?_encoding=UTF8&camp=536&creative=3132&field-keywords=Arcteryx%20%E5%A7%8B%E7%A5%96%E9%B8%9F&index=sporting&linkCode=ur2&search-type=ss&tag=qjoqbjlv-23
 ---
 
 ![Arc'teryx Logo](http://pinpaiku.org/media/files/2013/02/23/arcteryx_logo.jpg)
@@ -12,10 +19,10 @@ tags: [户外运动, 加拿大]
 
 始祖鸟公司在2001年被Adidas-Salomon公司收购，2005年Salonmon从Adidas-Salomon分拆后被售予目前世界上最大的运动用品生产商Amer Sport公司。始祖鸟公司目前部分产品的生产线已移至了新西兰、越南和中国等地，但其总部，设计工作室和主要生产线依然位于温哥华。
 
-始祖鸟公司最早的产品是登山装备。从1996年开始，始祖鸟就已经在其产品中广泛使用Gore-Tex面料。在始祖鸟的众多产品中最受消费者欢迎的当属其[Theta AR](http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB07S4%2FK0CFcRfH0GoT805sipKjwignAH%2FBsKt6X2bTJtefVf%2BZXc3ofM5LVuG%2Bphkl4KmsnU4oKGosRxWTRBldCJ%2FcA4%2F%2FVig%3D%3D)和[Gamma MX](http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB07S4%2FK0CFcRfH0GoT805sipKjwignAH%2FiTSEpAn3hDBatw3Ufje%2BnsNIRvdEEzhJCU%2FW%2B23HNxdCEh8zJo60zmiMHn0si3Pg%3D%3D)系列的冲锋衣。始祖鸟的产品设计也屡获Outside，Climbing，Men's Journal等专业户外杂志评选的诸多奖项。
+始祖鸟公司最早的产品是登山装备。从1996年开始，始祖鸟就已经在其产品中广泛使用Gore-Tex面料。在始祖鸟的众多产品中最受消费者欢迎的当属其[Theta AR]({{page.links.theta_ar}})和[Gamma MX]({{page.links.gamma_mx}})系列的冲锋衣。始祖鸟的产品设计也屡获Outside，Climbing，Men's Journal等专业户外杂志评选的诸多奖项。
 
 ![Arc'teryx Leaf](http://pinpaiku.org/media/files/2013/02/23/arcteryx_leaf_sock.jpg)
 
 始祖鸟另外有一条LEAF生产线，这条生产线主要为军队和警察部队提供装备。美国海军陆战队因为对原有的[MOLLE](http://en.wikipedia.org/wiki/MOLLE)战术背包的诸多不满，最终采用了基于始祖鸟Tango背包产品设计而出的[ILBE](http://en.wikipedia.org/wiki/ILBE)战术背包。
 
-始祖鸟的英文官方网站为：[http://www.arcteryx.com/](http://www.arcteryx.com/)。始祖鸟产品目前在国内的经销商主要有[三夫户外](http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB04MQzdgG3VSuWRI1IF3n%2FzhW5Dsj2wAMKMm1CALAVwJp3l%2FDydL150yH4Lh9ZyAC2MTkgNhLaNlyU%3D)，[亚马逊中国](http://www.amazon.cn/s/?_encoding=UTF8&camp=536&creative=3132&field-keywords=Arcteryx%20%E5%A7%8B%E7%A5%96%E9%B8%9F&index=sporting&linkCode=ur2&search-type=ss&tag=qjoqbjlv-23)等。
+始祖鸟的英文官方网站为：[http://www.arcteryx.com/](http://www.arcteryx.com/)。始祖鸟产品目前在国内的经销商主要有[三夫户外]({{page.links.arcteryx_sanfu}})，[亚马逊中国]({{page.links.arcteryx_amazon_cn}})等。

@@ -1,7 +1,16 @@
 ---
 title: 思乐 - Schleich
 layout: post
-tags: [玩具, 德国]
+tags:
+  - 玩具
+  - 德国
+links:
+  schleich_amazon_cn: http://www.amazon.cn/s/?_encoding=UTF8&camp=536&creative=3132&field-keywords=Schleich%20%E6%80%9D%E4%B9%90&index=toys&linkCode=ur2&search-type=ss&tag=qjoqbjlv-23
+  wild_life: http://www.amazon.cn/s/?_encoding=UTF8&camp=536&creative=3132&field-keywords=Schleich%20%E5%8A%A8%E7%89%A9&linkCode=ur2&rh=n%3A647070051%2Ck%3ASchleich%20%E5%8A%A8%E7%89%A9&tag=qjoqbjlv-23&url=search-alias%3Dtoys-and-games
+  dinosour: http://www.amazon.cn/s/?_encoding=UTF8&camp=536&creative=3132&field-keywords=Schleich%20%E6%81%90%E9%BE%99&linkCode=ur2&rh=n%3A647070051%2Ck%3ASchleich%20%E6%81%90%E9%BE%99&tag=qjoqbjlv-23&url=search-alias%3Dtoys-and-games
+  knight: http://www.amazon.cn/s/?_encoding=UTF8&camp=536&creative=3132&field-keywords=Schleich%20%E9%AA%91%E5%A3%AB&linkCode=ur2&rh=n%3A647070051%2Ck%3ASchleich%20%E9%AA%91%E5%A3%AB&tag=qjoqbjlv-23&url=search-alias%3Dtoys-and-games
+  fary: http://www.amazon.cn/s/?_encoding=UTF8&camp=536&creative=3132&field-keywords=Schleich%20%E7%B2%BE%E7%81%B5&linkCode=ur2&rh=n%3A647070051%2Ck%3ASchleich%20%E7%B2%BE%E7%81%B5&tag=qjoqbjlv-23&url=search-alias%3Dtoys-and-games
+
 ---
 
 ![schleich logo](http://pinpaiku.org/media/files/2013/03/01/schleich_logo.jpg)
@@ -12,10 +21,10 @@ tags: [玩具, 德国]
 
 ![schleich wild life animals](http://pinpaiku.org/media/files/2013/03/01/schleich_wild_life.jpg)
 
-思乐目前产品的设计，模具的生产加工都是在德国总部完成，然后由包括中国在内的其他国家的工厂进行批量生产及后期手工涂漆。思乐公司目前产品主要包括农场生活(Farm Life)，[野生动物](http://www.amazon.cn/s/?_encoding=UTF8&camp=536&creative=3132&field-keywords=Schleich%20%E5%8A%A8%E7%89%A9&linkCode=ur2&rh=n%3A647070051%2Ck%3ASchleich%20%E5%8A%A8%E7%89%A9&tag=qjoqbjlv-23&url=search-alias%3Dtoys-and-games)(Wild Life)，史前哺乳动物和[恐龙](http://www.amazon.cn/s/?_encoding=UTF8&camp=536&creative=3132&field-keywords=Schleich%20%E6%81%90%E9%BE%99&linkCode=ur2&rh=n%3A647070051%2Ck%3ASchleich%20%E6%81%90%E9%BE%99&tag=qjoqbjlv-23&url=search-alias%3Dtoys-and-games)(Prehistorical & Dinosour)，[骑士](http://www.amazon.cn/s/?_encoding=UTF8&camp=536&creative=3132&field-keywords=Schleich%20%E9%AA%91%E5%A3%AB&linkCode=ur2&rh=n%3A647070051%2Ck%3ASchleich%20%E9%AA%91%E5%A3%AB&tag=qjoqbjlv-23&url=search-alias%3Dtoys-and-games")和[精灵](http://www.amazon.cn/s/?_encoding=UTF8&camp=536&creative=3132&field-keywords=Schleich%20%E7%B2%BE%E7%81%B5&linkCode=ur2&rh=n%3A647070051%2Ck%3ASchleich%20%E7%B2%BE%E7%81%B5&tag=qjoqbjlv-23&url=search-alias%3Dtoys-and-games)(World of Knights and Faries)，蓝精灵(Smurf)等系列。
+思乐目前产品的设计，模具的生产加工都是在德国总部完成，然后由包括中国在内的其他国家的工厂进行批量生产及后期手工涂漆。思乐公司目前产品主要包括农场生活(Farm Life)，[野生动物]({{page.links.wild_life}})(Wild Life)，史前哺乳动物和[恐龙]({{page.links.dinosour}})(Prehistorical & Dinosour)，[骑士]({{page.links.knight}})和[精灵]({{page.links.fary}})(World of Knights and Faries)，蓝精灵(Smurf)等系列。
 
 ![schleich elephant](http://pinpaiku.org/media/files/2013/03/01/schleich_elephant.jpg)
 
 思乐产品设计的宗旨是力争还原真实自然的世界，让孩子们感受大自然的多样性。通过高品质，逼真安全的模型玩具，激发孩子们的无尽想象力，将孩子们带入踏上通往充满幻想与冒险的世界之旅。
 
-思乐的英文官方网站为：[http://www.schleich-s.com](http://www.schleich-s.com)。思乐的产品目前可以通过国内的网上商城如[亚马逊中国](http://www.amazon.cn/s/?_encoding=UTF8&camp=536&creative=3132&field-keywords=Schleich%20%E6%80%9D%E4%B9%90&index=toys&linkCode=ur2&search-type=ss&tag=qjoqbjlv-23)购买到。
+思乐的英文官方网站为：[http://www.schleich-s.com](http://www.schleich-s.com)。思乐的产品目前可以通过国内的网上商城如[亚马逊中国]({{page.links.schleich_amazon_cn}})购买到。
