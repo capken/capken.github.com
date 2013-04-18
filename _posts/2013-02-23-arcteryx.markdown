@@ -1,5 +1,7 @@
 ---
 title: 始祖鸟 - Arc'teryx
+keywords: 始祖鸟,Arc'teryx,Arcteryx,加拿大,户外,运动,品牌
+description: 始祖鸟(Arc'teryx)作为一个高端户外运动品牌，其产品主要涉足到登山、滑雪、徒步远足等户外运动领域。
 layout: post
 tags:
   - 户外运动

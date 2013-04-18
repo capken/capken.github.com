@@ -1,5 +1,7 @@
 ---
 title: 美旅 - American Tourister
+keywords: 美旅,美国旅行者,American Tourister,新秀丽,美国,箱包,手提箱,品牌
+description: 美国旅行者简称美旅(American Tourister)是一家在美国家喻户晓的手提箱品牌。美旅公司历史悠久，其产品坚固耐用，价格经济，深受广大消费者欢迎。
 layout: post
 tags:
   - 箱包
