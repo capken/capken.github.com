@@ -1,5 +1,7 @@
 ---
 title: 思乐 - Schleich
+keywords: 思乐,Schleich,德国,玩具,品牌
+description: 思乐(Schleich)是一家德国的塑胶模型玩具制造公司。思乐公司生产的每一件塑胶模型都可算得上精雕细琢，惟妙惟肖的艺术品。
 layout: post
 tags:
   - 玩具
