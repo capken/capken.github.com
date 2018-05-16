@@ -26,6 +26,31 @@
         console.log("Error:" + res);
       });
 
+      wx.onMenuShareTimeline({
+        title: '我爱分享',
+        link: 'http://capken.github.io/insurance/insurance-consultant-h5.html', 
+        imgUrl: 'http://capken.github.io/insurance/event.jpg',
+        success: function () {
+          console.log("share OK");
+        },
+        cancel: function () {
+          console.log("share Cancel");
+        }
+      });
+
+      wx.onMenuShareAppMessage({
+        title: '我爱分享',
+        desc: '分享描述',
+        link: 'http://capken.github.io/insurance/insurance-consultant-h5.html',
+        imgUrl: 'http://capken.github.io/insurance/event.jpg',
+        success: function () {
+          console.log("share OK");
+        },
+        cancel: function () {
+          console.log("share Cancel");
+        }
+      });
+
 
     </script>
   </body>
