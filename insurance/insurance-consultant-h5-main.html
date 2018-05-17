@@ -85,7 +85,7 @@
                     <img width="100%" src="img/page4.png" />
                 </div>
                 <div class="swiper-slide">
-                    <img width="100%" src="img/page5.png" />
+                    <img id="qrCode" width="100%" src="img/page5.png" />
                 </div>
             </div>
         </div>
@@ -118,6 +118,30 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();
+
+
+    var timer;
+    var touchduration = 1000;
+
+    var onlongtouch = function () {
+        _hmt.push(['_trackEvent', '微信二维码', '长按识别']);
+    };
+
+    function touchstart() {
+        timer = setTimeout(onlongtouch, touchduration);
+    }
+
+    function touchend() {
+        if (timer) {
+            clearTimeout(timer); // clearTimeout, not cleartimeout..
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        var image = $("#qrCode");
+        image.addEventListener("touchstart", touchstart, false);
+        image.addEventListener("touchend", touchend, false);
+    });
 </script>
 
 </html>
