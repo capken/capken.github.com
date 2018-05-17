@@ -48,6 +48,29 @@
         console.log("Error:" + res);
       });
 
+      var timer;
+      var touchduration = 1000;
+
+      var onlongtouch = function() {
+        console.log("long touch");
+      };
+      
+      function touchstart() {
+          timer = setTimeout(onlongtouch, touchduration);
+      }
+      
+      function touchend() {
+        if (timer) {
+            clearTimeout(timer); // clearTimeout, not cleartimeout..
+        }
+      }
+      
+      document.addEventListener("DOMContentLoaded", function(event) {
+        window.addEventListener("touchstart", touchstart, false);
+        window.addEventListener("touchend", touchend, false);
+      });
+      
+
     </script>
   </body>
 </html>
