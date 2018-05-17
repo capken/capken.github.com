@@ -2076,20 +2076,20 @@
 <body style="font-size: 12px;">
     <noscript>This is your fallback content in case JavaScript fails to load.</noscript>
     <div class="page-layout">
-        <header class="page-header">
+        <!-- <header class="page-header">
             <div class="header">
                 <button class="page-back" onclick="javascript :history.back(-1)">
                     <i></i>
                 </button>
                 <h1 class="page-title">测评结果</h1>
             </div>
-        </header>
+        </header> -->
         <main class="page-body">
             <div class="review-result-body">
                 <div class="result-title">
                     <div class="title">
                         <h1>我的风险报告</h1>
-                        <p>2018.05.10</p>
+                        <p></p>
                     </div>
                 </div>
                 <div class="review-content">
@@ -2258,14 +2258,14 @@
                     </div>
                 </div>
 
-                <div class="shared-footer" onclick="sharedQrImg()">查看详细保险方案</div>
+                <div class="shared-footer" onclick="sharedQrImg()">查看详细保险推荐方案</div>
             </div>
 
             <div class="main-mask-claim" onclick="sharedQrImg()">
                 <div class="main-pop" style="width: 220px;height:270px;z-index:110;">
                     <div style="line-height: 20px; overflow: hidden; display:inline-block; padding-top: 5px;">
                         <span>长按关注</span><br>
-                        <span>查看详细保险方案</span>
+                        <span>查看详细保险推荐方案</span>
                     </div>
                     <div style="margin:0 auto 0 auto;">
                         <img width="100%" height="100%" src="img/WechatIMG41.jpeg"/>
@@ -2281,6 +2281,48 @@
     <script type="text/javascript" src="./js/vendor.01796a9415e3bd9046c5.js"></script>
     <script type="text/javascript" src="./js/app.91db2e3b55fd29b86483.js"></script>
     <script type="text/javascript" src="./js/jquery.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="http://206.189.158.85:8080/wechat.init.js"></script>
+    <script>
+        wx.ready(function () {
+            wx.onMenuShareAppMessage({
+                title: '关心梦想，更关心健康',
+                desc: '我关心你的梦想，更关心你的健康，快来领取智能保险方案，助你开启无畏人生！',
+                link: 'http://event.zkjin.com/insurance/insurance-consultant-h5-main.html',
+                imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
+                success: function (res) {
+                    console.log("已分享");
+                },
+                cancel: function (res) {
+                    console.log("已取消");
+                },
+                fail: function (res) {
+                    console.log(JSON.stringify(res));
+                }
+            });
+
+            wx.onMenuShareTimeline({
+                title: '关心梦想，更关心健康',
+                desc: '我关心你的梦想，更关心你的健康，快来领取智能保险方案，助你开启无畏人生！',
+                link: 'http://event.zkjin.com/insurance/insurance-consultant-h5-main.html',
+                imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
+                success: function (res) {
+                    console.log("已分享");
+                },
+                cancel: function (res) {
+                    console.log("已取消");
+                },
+                fail: function (res) {
+                    console.log(JSON.stringify(res));
+                }
+            });
+        });
+
+        wx.error(function (res) {
+            console.log("Error:" + res);
+        });
+    </script>
+
     <script type="text/javascript">
         if (!sessionStorage.result) {
             window.location = "insurance-consultant-h5.html";
@@ -2363,50 +2405,59 @@
                           pageSevenValue/result.pageSeven.length * resultData.accident[1].pageSeven.weight;
 
         var suggestion = resultData.aged[0].pageFive.values[result.pageFive] * resultData.aged[0].pageSix.values[result.pageSix] * 10000;
+        
+        
         if(healthyResult1 ==0 ){
             $("#healthyContent1").hide();
         }else{
             $("#healthyContent1").show();
-            $("#healthyResult1").text(healthyResult1.toFixed(2) + "万");
+            healthyResult1 = Math.round(healthyResult1) + (5-Math.round(healthyResult1)%5);
+            $("#healthyResult1").text(healthyResult1 + "万");
         }
         if(healthyResult2 == 0){
             $("#healthyContent2").hide();
         }else{
             $("#healthyContent2").show();
-            $("#healthyResult2").text(healthyResult2.toFixed(2) + "万");
+            healthyResult2 = Math.round(healthyResult2) + (5-Math.round(healthyResult2)%5);
+            $("#healthyResult2").text(healthyResult2 + "万");
         }
 
         if(accidentResult1 == 0){
             $("#accidentContent1").hide();
         }else{
             $("#accidentContent1").show();
-            $("#accidentResult1").text(accidentResult1.toFixed(2) + "万");
+            accidentResult1 = Math.round(accidentResult1) + (5-Math.round(accidentResult1)%5);
+            $("#accidentResult1").text(accidentResult1 + "万");
         }
         if(accidentResult2 == 0){
             $("#accidentContent2").hide();
         }else{
             $("#accidentContent2").show();
-            $("#accidentResult2").text(accidentResult2.toFixed(2) + "万");
+            accidentResult2 = Math.round(accidentResult2) + (5-Math.round(accidentResult2)%5);
+            $("#accidentResult2").text(accidentResult2 + "万");
         }
 
         if(agedResult == 0){
             $("#agedContent").hide();
         }else{
             $("#agedContent").show();
-            $("#agedResult").text((agedResult*10000).toFixed(2) + "元/月");
+            agedResult = Math.round(agedResult) + (5-Math.round(agedResult)%5);
+            $("#agedResult").text((agedResult*10000) + "元/月");
         }
 
         if(otherResult == 0){
             $("#otherContent").hide();
         }else{
             $("#otherContent").show();
-            $("#otherResult").text(otherResult.toFixed(2) + "万");
+            otherResult = Math.round(otherResult) + (5-Math.round(otherResult)%5);
+            $("#otherResult").text(otherResult + "万");
         }
         if(womenResult == 0){
             $("#womenContent").hide();
         }else{
             $("#womenContent").show();
-            $("#womenResult").text(womenResult.toFixed(2) + "万");
+            womenResult = Math.round(womenResult) + (5-Math.round(womenResult)%5);
+            $("#womenResult").text(womenResult + "万");
         }
         if(travelResult == 0){
             $("#travelContent").hide();
@@ -2462,7 +2513,9 @@
                     name: '其他'
                 }]
             },
-            tooltip: {},
+            tooltip: {
+                formatter: '{c}万'
+            },
             dataset: {
                 source: [
                     ['健康', healthyResult1 + healthyResult2 ],
@@ -2503,6 +2556,10 @@
             }
         }
 
+        var finishDate = new Date();
+        var dateStr = sessionStorage.finishDate ? sessionStorage.finishDate : finishDate.getFullYear() + "." + (finishDate.getMonth() + 1) + "." + finishDate.getDate();
+        sessionStorage.finishDate = dateStr;
+        $(".title p").text(dateStr);
     </script>
 
 </body>

@@ -21,9 +21,49 @@
     <meta name="msapplication-TileImage" content="static/img/icons/msapplication-icon-144x144.png">
     <meta name="msapplication-TileColor" content="#000000">
     <script src="js/flexible.js"></script>
-    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/jquery.js"></script> 
     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script src="http://206.189.158.85:8080/wechat.init.js"></script>
+    <script>
+        wx.ready(function () {
+            wx.onMenuShareAppMessage({
+                title: '关心梦想，更关心健康',
+                desc: '我关心你的梦想，更关心你的健康，快来领取智能保险方案，助你开启无畏人生！',
+                link: 'http://event.zkjin.com/insurance/insurance-consultant-h5-main.html',
+                imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
+                success: function (res) {
+                    console.log("已分享");
+                },
+                cancel: function (res) {
+                    console.log("已取消");
+                },
+                fail: function (res) {
+                    console.log(JSON.stringify(res));
+                }
+            });
+
+            wx.onMenuShareTimeline({
+                title: '关心梦想，更关心健康',
+                desc: '我关心你的梦想，更关心你的健康，快来领取智能保险方案，助你开启无畏人生！',
+                link: 'http://event.zkjin.com/insurance/insurance-consultant-h5-main.html',
+                imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
+                success: function (res) {
+                    console.log("已分享");
+                },
+                cancel: function (res) {
+                    console.log("已取消");
+                },
+                fail: function (res) {
+                    console.log(JSON.stringify(res));
+                }
+            });
+        });
+
+        wx.error(function (res) {
+            console.log("Error:" + res);
+        });
+    </script>
+
     <style>
         .page-layout {
             position: fixed;
@@ -79,48 +119,6 @@
 </head>
 
 <body style="font-size: 12px">
-  <script>
-      wx.ready(function(){
-        wx.onMenuShareAppMessage({
-          title: '关心梦想，更关心健康',
-          desc: '我关心你的梦想，更关心你的健康，快来领取智能保险方案，助你开启无畏人生！',
-          link: 'http://event.zkjin.com/insurance/insurance-consultant-h5-index.html', 
-          imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
-          success: function (res) {
-            console.log("已分享");
-          },
-          cancel: function (res) {
-            console.log("已取消");
-          },
-          fail: function (res) {
-            console.log(JSON.stringify(res));
-          }
-        });
-
-        wx.onMenuShareTimeline({
-          title: '关心梦想，更关心健康',
-          desc: '我关心你的梦想，更关心你的健康，快来领取智能保险方案，助你开启无畏人生！',
-          link: 'http://event.zkjin.com/insurance/insurance-consultant-h5-index.html', 
-          imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
-          success: function (res) {
-            console.log("已分享");
-          },
-          cancel: function (res) {
-            console.log("已取消");
-          },
-          fail: function (res) {
-            console.log(JSON.stringify(res));
-          }
-        });
-      });
-
-      wx.error(function(res){
-        console.log("Error:" + res);
-      });
-  </script>
-
-
-
     <noscript>This is your fallback content in case JavaScript fails to load.</noscript>
     <div class="page-layout">
         <img width="100%" src="img/index.png" />
@@ -136,7 +134,7 @@
                 <br>
             </div>
             <div class="survey-button">
-                <div onclick="javascript:location.href='insurance-consultant-h5.html'">免费领取只能保障方案</div>
+                <div onclick="javascript:location.href='insurance-consultant-h5.html'">免费领取智能保障方案</div>
             </div>
             <div class="survey-body" style="color:#598ED8;margin-top: 10px;">
                 <span>已有

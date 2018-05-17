@@ -2034,12 +2034,12 @@
 <body style="font-size: 12px;">
     <noscript>This is your fallback content in case JavaScript fails to load.</noscript>
     <div class="page-layout">
-        <header class="page-header">
+        <!-- <header class="page-header">
             <button class="page-back" onclick="javascript :history.back(-1)">
                 <i></i>
             </button>
             <h1 class="page-title">风险测评</h1>
-        </header>
+        </header> -->
         <main class="page-body">
             <div class="survey-body">
                 <div class="survey-progress-bar">
@@ -2081,6 +2081,47 @@
     <script type="text/javascript" src="./js/vendor.01796a9415e3bd9046c5.js"></script>
     <script type="text/javascript" src="./js/app.91db2e3b55fd29b86483.js"></script>
     <script type="text/javascript" src="./js/jquery.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="http://206.189.158.85:8080/wechat.init.js"></script>
+    <script>
+        wx.ready(function () {
+            wx.onMenuShareAppMessage({
+                title: '关心梦想，更关心健康',
+                desc: '我关心你的梦想，更关心你的健康，快来领取智能保险方案，助你开启无畏人生！',
+                link: 'http://event.zkjin.com/insurance/insurance-consultant-h5-main.html',
+                imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
+                success: function (res) {
+                    console.log("已分享");
+                },
+                cancel: function (res) {
+                    console.log("已取消");
+                },
+                fail: function (res) {
+                    console.log(JSON.stringify(res));
+                }
+            });
+
+            wx.onMenuShareTimeline({
+                title: '关心梦想，更关心健康',
+                desc: '我关心你的梦想，更关心你的健康，快来领取智能保险方案，助你开启无畏人生！',
+                link: 'http://event.zkjin.com/insurance/insurance-consultant-h5-main.html',
+                imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
+                success: function (res) {
+                    console.log("已分享");
+                },
+                cancel: function (res) {
+                    console.log("已取消");
+                },
+                fail: function (res) {
+                    console.log(JSON.stringify(res));
+                }
+            });
+        });
+
+        wx.error(function (res) {
+            console.log("Error:" + res);
+        });
+    </script>
     <script type="application/javascript">
         $(document).ready(
             function () {

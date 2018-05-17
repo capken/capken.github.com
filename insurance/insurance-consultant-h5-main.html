@@ -22,99 +22,102 @@
     <meta name="msapplication-TileColor" content="#000000">
     <script src="js/flexible.js"></script>
     <script type="text/javascript" src="./js/jquery.js"></script>
-    <link href="./css/swiper.min.css" rel="stylesheet">
+    <link href="./css/swiper.css" rel="stylesheet">
     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script src="http://206.189.158.85:8080/wechat.init.js"></script>
+    <script>
+        wx.ready(function () {
+            wx.onMenuShareAppMessage({
+                title: '关心梦想，更关心健康',
+                desc: '我关心你的梦想，更关心你的健康，快来领取智能保险方案，助你开启无畏人生！',
+                link: 'http://event.zkjin.com/insurance/insurance-consultant-h5-main.html',
+                imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
+                success: function (res) {
+                    console.log("已分享");
+                },
+                cancel: function (res) {
+                    console.log("已取消");
+                },
+                fail: function (res) {
+                    console.log(JSON.stringify(res));
+                }
+            });
+
+            wx.onMenuShareTimeline({
+                title: '关心梦想，更关心健康',
+                desc: '我关心你的梦想，更关心你的健康，快来领取智能保险方案，助你开启无畏人生！',
+                link: 'http://event.zkjin.com/insurance/insurance-consultant-h5-main.html',
+                imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
+                success: function (res) {
+                    console.log("已分享");
+                },
+                cancel: function (res) {
+                    console.log("已取消");
+                },
+                fail: function (res) {
+                    console.log(JSON.stringify(res));
+                }
+            });
+        });
+
+        wx.error(function (res) {
+            console.log("Error:" + res);
+        });
+    </script>
     </style>
 </head>
 
 <body style="margin: 0; padding: 0">
-  <script>
-      wx.ready(function(){
-        wx.onMenuShareAppMessage({
-          title: '关心梦想，更关心你的健康',
-          desc: '我关心你的梦想，更关心你的健康，快来领取智能保险方案，助你开启无畏人生！',
-          link: 'http://event.zkjin.com/insurance/insurance-consultant-h5-main.html', 
-          imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
-          success: function (res) {
-            console.log("已分享");
-          },
-          cancel: function (res) {
-            console.log("已取消");
-          },
-          fail: function (res) {
-            console.log(JSON.stringify(res));
-          }
-        });
-
-        wx.onMenuShareTimeline({
-          title: '关心梦想，更关心你的健康',
-          desc: '我关心你的梦想，更关心你的健康，快来领取智能保险方案，助你开启无畏人生！',
-          link: 'http://event.zkjin.com/insurance/insurance-consultant-h5-main.html', 
-          imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
-          success: function (res) {
-            console.log("已分享");
-          },
-          cancel: function (res) {
-            console.log("已取消");
-          },
-          fail: function (res) {
-            console.log(JSON.stringify(res));
-          }
-        });
-      });
-
-      wx.error(function(res){
-        console.log("Error:" + res);
-      });
-  </script>
-
     <noscript>This is your fallback content in case JavaScript fails to load.</noscript>
     <div class="page-layout">
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img width="100%" src="img/page1.png" />
-            </div>
-            <div class="swiper-slide">
-                <img width="100%" src="img/page2.png" />
-            </div>
-            <div class="swiper-slide">
-                <img width="100%" src="img/page3.png" />
-            </div>
-            <div class="swiper-slide">
-                <img width="100%" src="img/page4.png" />
-            </div>
-            <div class="swiper-slide">
-                <img width="100%" src="img/page5.png" />
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img width="100%" src="img/page1.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="100%" src="img/page2.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="100%" src="img/page3.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="100%" src="img/page4.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img width="100%" src="img/page5.png" />
+                </div>
             </div>
         </div>
-    </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev" style="color:gray"></div>
+        <div class="swiper-button-next" style="color:gray"></div>
 
-    <script src="js/swiper.min.js"></script>
+        <script src="js/swiper.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var mySwiper = new Swiper('.swiper-container', {
-            // loop: true,
+        <!-- Initialize Swiper -->
+        <script>
+            var mySwiper = new Swiper('.swiper-container', {
+                // loop: true,
 
-            // 如果需要前进后退按钮
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        })        
-    </script>
+                // 如果需要前进后退按钮
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                lazy: {
+                    loadPrevNext: true,
+                }
+            })        
+        </script>
 </body>
 <script>
     var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?a93876fa70d9daab81d30c28f78ccd8b";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?a93876fa70d9daab81d30c28f78ccd8b";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
     })();
 </script>
+
 </html>
