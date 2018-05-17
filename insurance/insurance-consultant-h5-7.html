@@ -2590,7 +2590,7 @@
     }
 
     document.addEventListener("DOMContentLoaded", function (event) {
-        var image = $("#qrCode");
+        var image = document.getElementById("qrCode");
         image.addEventListener("touchstart", touchstart, false);
         image.addEventListener("touchend", touchend, false);
     });
