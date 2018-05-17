@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,user-scalable=0">
-    <title>insurance-consultant-h5</title>
+    <title>保呗PLUS</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./static/img/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./static/img/icons/favicon-16x16.png">
     <!--[if IE]>
@@ -15,7 +15,7 @@
     <meta name="theme-color" content="#4DBA87">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="insurance-consultant-h5">
+    <meta name="apple-mobile-web-app-title" content="保呗PLUS">
     <link rel="apple-touch-icon" href="static/img/icons/apple-touch-icon-152x152.png">
     <link rel="mask-icon" href="static/img/icons/safari-pinned-tab.svg" color="#4DBA87">
     <meta name="msapplication-TileImage" content="static/img/icons/msapplication-icon-144x144.png">
@@ -2201,7 +2201,7 @@
                                 </h3>
                                 <p>养老险，又称“终身年金保险”，可以保障在年老或丧失劳动能力时获得经济补偿。</p>
                                 <h4>
-                                    <label>建议投保额度</label>
+                                    <label>建议领取的养老金额</label>
                                 </h4>
                                 <p id="agedResult" class="sug-amount"></p>
                                 <ul>
@@ -2258,14 +2258,18 @@
                     </div>
                 </div>
 
-                <div class="shared-footer" onclick="sharedQrImg()">领取更多福利</div>
+                <div class="shared-footer" onclick="sharedQrImg()">查看详细保险方案</div>
             </div>
 
             <div class="main-mask-claim" onclick="sharedQrImg()">
-                <div class="main-pop" style="width: 220px;height:220px;z-index:110;">
-                   <div style="margin:0 px auto 0 auto;">
+                <div class="main-pop" style="width: 220px;height:270px;z-index:110;">
+                    <div style="line-height: 20px; overflow: hidden; display:inline-block; padding-top: 5px;">
+                        <span>长按关注</span><br>
+                        <span>查看详细保险方案</span>
+                    </div>
+                    <div style="margin:0 auto 0 auto;">
                         <img width="100%" height="100%" src="img/WechatIMG41.jpeg"/>
-                   </div>
+                    </div>
                 </div>
             </div>
             
@@ -2294,14 +2298,41 @@
 
         var resultData = {"healthy":[{"pageZero":{"values":{"1":100,"2":50,"3":50,"4":50},"weight":0.4},"pageOne":{"values":{"1":100,"2":100,"3":100,"4":100},"weight":0.3},"pageTwo":{"values":{"1":0,"2":0},"weight":0},"pageThree":{"values":{"1":0,"2":0,"3":0,"4":0},"weight":0},"pageFour":{"values":{"1":0,"2":0,"3":0,"4":0,"5":0},"weight":0},"pageFive":{"values":{"1":50,"2":100,"3":200,"4":300},"weight":0.2},"pageSix":{"values":{"1":50,"2":50,"3":100,"4":100},"weight":0.1},"pageSeven":{"values":{"1":0,"2":0,"3":0,"4":0,"5":0},"weight":0}},{"pageZero":{"values":{"1":100,"2":50,"3":30,"4":10},"weight":0.2},"pageOne":{"values":{"1":30,"2":30,"3":50,"4":100},"weight":0.13},"pageTwo":{"values":{"1":0,"2":0},"weight":0},"pageThree":{"values":{"1":30,"2":50,"3":50,"4":30},"weight":0.07},"pageFour":{"values":{"1":0,"2":0,"3":0,"4":0,"5":0},"weight":0},"pageFive":{"values":{"1":0,"2":10,"3":30,"4":50},"weight":0.27},"pageSix":{"values":{"1":0,"2":30,"3":50,"4":100},"weight":0.33},"pageSeven":{"values":{"1":0,"2":0,"3":0,"4":0,"5":0},"weight":0}}],"accident":[{"pageZero":{"values":{"1":100,"2":50,"3":30,"4":10},"weight":0.2},"pageOne":{"values":{"1":30,"2":30,"3":50,"4":100},"weight":0.13},"pageTwo":{"values":{"1":0,"2":0},"weight":0},"pageThree":{"values":{"1":30,"2":50,"3":50,"4":0},"weight":0.07},"pageFour":{"values":{"1":0,"2":0,"3":0,"4":0,"5":0},"weight":0},"pageFive":{"values":{"1":0,"2":10,"3":30,"4":50},"weight":0.27},"pageSix":{"values":{"1":0,"2":30,"3":50,"4":100},"weight":0.33},"pageSeven":{"values":{"1":0,"2":0,"3":0,"4":0,"5":0},"weight":0}},{"pageZero":{"values":{"1":100,"2":50,"3":30,"4":10},"weight":0.21},"pageOne":{"values":{"1":50,"2":50,"3":100,"4":100},"weight":0.07},"pageTwo":{"values":{"1":0,"2":0},"weight":0},"pageThree":{"values":{"1":50,"2":50,"3":50,"4":50},"weight":0.04},"pageFour":{"values":{"1":30,"2":50,"3":50,"4":50,"5":50},"weight":0.18},"pageFive":{"values":{"1":30,"2":50,"3":100,"4":100},"weight":0.11},"pageSix":{"values":{"1":30,"2":50,"3":100,"4":100},"weight":0.11},"pageSeven":{"values":{"1":50,"2":30,"3":100,"4":100,"5":30},"weight":0.25}}],"aged":[{"pageZero":{"values":{"1":0,"2":0,"3":0,"4":0},"weight":0},"pageOne":{"values":{"1":0,"2":0,"3":0,"4":0},"weight":0},"pageTwo":{"values":{"1":0,"2":0},"weight":0},"pageThree":{"values":{"1":1,"2":2,"3":3,"4":4},"weight":0.33},"pageFour":{"values":{"1":0,"2":0,"3":0,"4":0,"5":0},"weight":0},"pageFive":{"values":{"1":1,"2":2,"3":3,"4":4},"weight":0.67},"pageSix":{"values":{"1":0.2,"2":0.3,"3":0.55,"4":0.7,},"weight":0},"pageSeven":{"values":{"1":0,"2":0,"3":0,"4":0,"5":0},"weight":0}}],"others":[{"pageZero":{"values":{"1":100,"2":50,"3":50,"4":0},"weight":0},"pageOne":{"values":{"1":0,"2":0,"3":0,"4":0},"weight":0},"pageTwo":{"values":{"1":0,"2":50},"weight":0},"pageThree":{"values":{"1":0,"2":0,"3":0,"4":0},"weight":0},"pageFour":{"values":{"1":0,"2":0,"3":0,"4":0,"5":0},"weight":0},"pageFive":{"values":{"1":0,"2":0,"3":0,"4":0},"weight":0},"pageSix":{"values":{"1":0,"2":0,"3":0,"4":0,},"weight":0},"pageSeven":{"values":{"1":0,"2":0,"3":0,"4":0,"5":0},"weight":0}}]};
 
+       
+
+        
+        var agedResult = 0;
+        if(result.pageThree == 2 || result.pageThree == 3){
+            agedResult = resultData.aged[0].pageFive.values[result.pageFive] * resultData.aged[0].pageSix.values[result.pageSix] / 12 * 0.6 * 0.33 +
+                         resultData.aged[0].pageFive.values[result.pageFive] * resultData.aged[0].pageSix.values[result.pageSix] / 12 * 0.6 * 0.67
+        }
+
+        var pageSevenValue = 0;
+        var otherResult = 0;
+        var womenResult = 0;
+        var travelResult = 0;
+        if(result.pageTwo == 2 ){
+            womenResult = resultData.others[0].pageTwo.values[result.pageTwo] ;
+        }
+        if(result.pageSeven){
+            $.each(result.pageSeven,function(n,value){
+                pageSevenValue += resultData.accident[1].pageSeven.values[value];
+                if(value == 1){
+                travelResult = "旅行险 主要由您的旅行目的地决定";
+                }else if(value == 2){
+                    otherResult = resultData.others[0].pageZero.values[result.pageZero];
+                }
+            });
+        }
+
         var healthyResult1 = resultData.healthy[0].pageZero.values[result.pageZero] * resultData.healthy[0].pageZero.weight +
                           resultData.healthy[0].pageOne.values[result.pageOne] * resultData.healthy[0].pageOne.weight +
                           resultData.healthy[0].pageTwo.values[result.pageTwo] * resultData.healthy[0].pageTwo.weight +
                           resultData.healthy[0].pageThree.values[result.pageThree] * resultData.healthy[0].pageThree.weight +
                           resultData.healthy[0].pageFour.values[result.pageFour] * resultData.healthy[0].pageFour.weight +
                           resultData.healthy[0].pageFive.values[result.pageFive] * resultData.healthy[0].pageFive.weight +
-                          resultData.healthy[0].pageSix.values[result.pageSix] * resultData.healthy[0].pageSix.weight +
-                          resultData.healthy[0].pageSeven.values[result.pageSeven] * resultData.healthy[0].pageSeven.weight;
+                          resultData.healthy[0].pageSix.values[result.pageSix] * resultData.healthy[0].pageSix.weight;
+                        //   resultData.healthy[0].pageSeven.values[result.pageSeven] * resultData.healthy[0].pageSeven.weight;
 
         var healthyResult2 = resultData.healthy[1].pageZero.values[result.pageZero] * resultData.healthy[1].pageZero.weight +
                           resultData.healthy[1].pageOne.values[result.pageOne] * resultData.healthy[1].pageOne.weight +
@@ -2309,8 +2340,8 @@
                           resultData.healthy[1].pageThree.values[result.pageThree] * resultData.healthy[1].pageThree.weight +
                           resultData.healthy[1].pageFour.values[result.pageFour] * resultData.healthy[1].pageFour.weight +
                           resultData.healthy[1].pageFive.values[result.pageFive] * resultData.healthy[1].pageFive.weight +
-                          resultData.healthy[1].pageSix.values[result.pageSix] * resultData.healthy[1].pageSix.weight +
-                          resultData.healthy[1].pageSeven.values[result.pageSeven] * resultData.healthy[1].pageSeven.weight;
+                          resultData.healthy[1].pageSix.values[result.pageSix] * resultData.healthy[1].pageSix.weight;
+                        //   resultData.healthy[1].pageSeven.values[result.pageSeven] * resultData.healthy[1].pageSeven.weight;
 
 
         var accidentResult1 = resultData.accident[0].pageZero.values[result.pageZero] * resultData.accident[0].pageZero.weight +
@@ -2319,8 +2350,8 @@
                           resultData.accident[0].pageThree.values[result.pageThree] * resultData.accident[0].pageThree.weight +
                           resultData.accident[0].pageFour.values[result.pageFour] * resultData.accident[0].pageFour.weight +
                           resultData.accident[0].pageFive.values[result.pageFive] * resultData.accident[0].pageFive.weight +
-                          resultData.accident[0].pageSix.values[result.pageSix] * resultData.accident[0].pageSix.weight +
-                          resultData.accident[0].pageSeven.values[result.pageSeven] * resultData.accident[0].pageSeven.weight;
+                          resultData.accident[0].pageSix.values[result.pageSix] * resultData.accident[0].pageSix.weight;
+                        //   resultData.accident[0].pageSeven.values[result.pageSeven] * resultData.accident[0].pageSeven.weight;
 
         var accidentResult2 = resultData.accident[1].pageZero.values[result.pageZero] * resultData.accident[1].pageZero.weight +
                           resultData.accident[1].pageOne.values[result.pageOne] * resultData.accident[1].pageOne.weight +
@@ -2329,71 +2360,53 @@
                           resultData.accident[1].pageFour.values[result.pageFour] * resultData.accident[1].pageFour.weight +
                           resultData.accident[1].pageFive.values[result.pageFive] * resultData.accident[1].pageFive.weight +
                           resultData.accident[1].pageSix.values[result.pageSix] * resultData.accident[1].pageSix.weight +
-                          resultData.accident[1].pageSeven.values[result.pageSeven] * resultData.accident[1].pageSeven.weight;
-        
-        var agedResult = 0;
-        if(result.pageThree == 2 || result.pageThree == 3){
-            agedResult = resultData.aged[0].pageFive.values[result.pageFive] * resultData.aged[0].pageSix.values[result.pageSix] / 12 * 0.6 * 0.33 +
-                         resultData.aged[0].pageFive.values[result.pageFive] * resultData.aged[0].pageSix.values[result.pageSix] / 12 * 0.6 * 0.67
-        }
-
-        var otherResult = 0;
-        var womenResult = 0;
-        var travelResult = 0;
-        if(result.pageTwo == 2 ){
-            womenResult = resultData.others[0].pageTwo.values[result.pageTwo] ;
-        }
-        if(result.pageSeven == 1){
-            travelResult = "旅行险 主要由您的旅行目的地决定";
-        }else if(result.pageSeven == 2){
-            otherResult = resultData.others[0].pageZero.values[result.pageZero];
-        }
+                          pageSevenValue/result.pageSeven.length * resultData.accident[1].pageSeven.weight;
 
         var suggestion = resultData.aged[0].pageFive.values[result.pageFive] * resultData.aged[0].pageSix.values[result.pageSix] * 10000;
         if(healthyResult1 ==0 ){
             $("#healthyContent1").hide();
         }else{
             $("#healthyContent1").show();
-            $("#healthyResult1").text(healthyResult1 + "万");
+            $("#healthyResult1").text(healthyResult1.toFixed(2) + "万");
         }
         if(healthyResult2 == 0){
             $("#healthyContent2").hide();
         }else{
             $("#healthyContent2").show();
-            $("#healthyResult2").text(healthyResult2 + "万");
+            $("#healthyResult2").text(healthyResult2.toFixed(2) + "万");
         }
 
         if(accidentResult1 == 0){
             $("#accidentContent1").hide();
         }else{
             $("#accidentContent1").show();
-            $("#accidentResult1").text(accidentResult1 + "万");
+            $("#accidentResult1").text(accidentResult1.toFixed(2) + "万");
         }
         if(accidentResult2 == 0){
             $("#accidentContent2").hide();
         }else{
             $("#accidentContent2").show();
-            $("#accidentResult2").text(accidentResult2 + "万");
+            $("#accidentResult2").text(accidentResult2.toFixed(2) + "万");
         }
 
         if(agedResult == 0){
             $("#agedContent").hide();
         }else{
             $("#agedContent").show();
-            $("#agedResult").text(agedResult + "万");
+            $("#agedResult").text((agedResult*10000).toFixed(2) + "元/月");
         }
 
         if(otherResult == 0){
             $("#otherContent").hide();
         }else{
             $("#otherContent").show();
-            $("#otherResult").text(otherResult + "万");
+            $("#otherResult").text(otherResult.toFixed(2) + "万");
         }
         if(womenResult == 0){
             $("#womenContent").hide();
         }else{
             $("#womenContent").show();
-            $("#womenResult").text(womenResult + "万");
+            $("#womenResult").text(womenResult.toFixed(2) + "万");
         }
         if(travelResult == 0){
             $("#travelContent").hide();
@@ -2402,7 +2415,7 @@
             $("#travelResult").text(travelResult);
         }
         
-        $("#suggestion").text(suggestion*0.05 + "~" + suggestion*0.1+"元");        
+        $("#suggestion").text(suggestion*0.1+"元");
 
 
         $(".tabs li").click(
@@ -2454,7 +2467,7 @@
                 source: [
                     ['健康', healthyResult1 + healthyResult2 ],
                     ['意外', accidentResult1 + accidentResult2],
-                    ['养老', agedResult],
+                    ['养老', (healthyResult1+healthyResult2+accidentResult1+accidentResult2 +otherResult + womenResult)*0.15],
                     ['其他', otherResult + womenResult]
                 ]
             },
@@ -2493,5 +2506,13 @@
     </script>
 
 </body>
-
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a93876fa70d9daab81d30c28f78ccd8b";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 </html>
