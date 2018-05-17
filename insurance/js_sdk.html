@@ -10,37 +10,43 @@
     <script>
       wx.ready(function(){
         console.log("WX_OK");
+
+        wx.onMenuShareAppMessage({
+          title: '智能保顾测评',
+          desc: '我是智能保顾测评。',
+          link: 'http://event.zkjin.com/insurance/insurance-consultant-h5.html', 
+          imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
+          success: function (res) {
+            console.log("已分享");
+          },
+          cancel: function (res) {
+            console.log("已取消");
+          },
+          fail: function (res) {
+            console.log(JSON.stringify(res));
+          }
+        });
+
+        wx.onMenuShareAppMessage({
+          title: '智能保顾测评',
+          desc: '我是智能保顾测评。',
+          link: 'http://event.zkjin.com/insurance/insurance-consultant-h5.html', 
+          imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
+          success: function (res) {
+            console.log("已分享");
+          },
+          cancel: function (res) {
+            console.log("已取消");
+          },
+          fail: function (res) {
+            console.log(JSON.stringify(res));
+          }
+        });
       });
 
       wx.error(function(res){
         console.log("Error:" + res);
       });
-
-      wx.onMenuShareTimeline({
-        title: '我爱分享',
-        link: 'http://event.zkjin.com/insurance/insurance-consultant-h5.html', 
-        imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
-        success: function () {
-          console.log("It's shared.");
-        },
-        cancel: function () {
-          console.log("Share is cancel.");
-        }
-      });
-
-      wx.onMenuShareAppMessage({
-        title: '我爱分享',
-        desc: '分享描述',
-        link: 'http://event.zkjin.com/insurance/insurance-consultant-h5.html',
-        imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
-        success: function () {
-          console.log("It's shared.");
-        },
-        cancel: function () {
-          console.log("Share is cancel.");
-        }
-      });
-
 
     </script>
   </body>
