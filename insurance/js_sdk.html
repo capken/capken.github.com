@@ -7,6 +7,9 @@
   </head>
   <body>
     <h2>JSSDK Test</h2>
+
+    <img id="testImage" src="event.jpg" />
+
     <script>
       wx.ready(function(){
         console.log("WX_OK");
@@ -66,8 +69,9 @@
       }
       
       document.addEventListener("DOMContentLoaded", function(event) {
-        window.addEventListener("touchstart", touchstart, false);
-        window.addEventListener("touchend", touchend, false);
+        var image = document.getElementById("testImage");
+        image.addEventListener("touchstart", touchstart, false);
+        image.addEventListener("touchend", touchend, false);
       });
       
 
