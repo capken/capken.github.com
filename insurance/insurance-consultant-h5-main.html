@@ -23,10 +23,52 @@
     <script src="js/flexible.js"></script>
     <script type="text/javascript" src="./js/jquery.js"></script>
     <link href="./css/swiper.min.css" rel="stylesheet">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="http://206.189.158.85:8080/wechat.init.js"></script>
     </style>
 </head>
 
 <body style="margin: 0; padding: 0">
+  <script>
+      wx.ready(function(){
+        wx.onMenuShareAppMessage({
+          title: '智能保顾测评',
+          desc: '我是智能保顾测评。',
+          link: 'http://event.zkjin.com/insurance/insurance-consultant-h5-main.html', 
+          imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
+          success: function (res) {
+            console.log("已分享");
+          },
+          cancel: function (res) {
+            console.log("已取消");
+          },
+          fail: function (res) {
+            console.log(JSON.stringify(res));
+          }
+        });
+
+        wx.onMenuShareAppMessage({
+          title: '智能保顾测评',
+          desc: '我是智能保顾测评。',
+          link: 'http://event.zkjin.com/insurance/insurance-consultant-h5-main.html', 
+          imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
+          success: function (res) {
+            console.log("已分享");
+          },
+          cancel: function (res) {
+            console.log("已取消");
+          },
+          fail: function (res) {
+            console.log(JSON.stringify(res));
+          }
+        });
+      });
+
+      wx.error(function(res){
+        console.log("Error:" + res);
+      });
+  </script>
+
     <noscript>This is your fallback content in case JavaScript fails to load.</noscript>
     <div class="page-layout">
     <div class="swiper-container">
