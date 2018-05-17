@@ -3,24 +3,14 @@
   <head>
     <title>JSSDK Test</title>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="http://206.189.158.85:8080/wechat.init.js"></script>
   </head>
   <body>
     <h2>JSSDK Test</h2>
     <script>
-
-      wx.config({
-        debug: true,
-        appId: 'wx92945039945d7e63',
-        timestamp: 1526459502,
-        nonceStr: 'cm5piWfRzIkhQcqq',
-        signature: '6fe9d1df76192001cc75b8931ab7dc240638581a',
-        jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage']
-      });
-
       wx.ready(function(){
         console.log("WX_OK");
       });
-
 
       wx.error(function(res){
         console.log("Error:" + res);
@@ -28,26 +18,26 @@
 
       wx.onMenuShareTimeline({
         title: '我爱分享',
-        link: 'http://capken.github.io/insurance/insurance-consultant-h5.html', 
-        imgUrl: 'http://capken.github.io/insurance/event.jpg',
+        link: 'http://event.zkjin.com/insurance/insurance-consultant-h5.html', 
+        imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
         success: function () {
-          console.log("share OK");
+          console.log("It's shared.");
         },
         cancel: function () {
-          console.log("share Cancel");
+          console.log("Share is cancel.");
         }
       });
 
       wx.onMenuShareAppMessage({
         title: '我爱分享',
         desc: '分享描述',
-        link: 'http://capken.github.io/insurance/insurance-consultant-h5.html',
-        imgUrl: 'http://capken.github.io/insurance/event.jpg',
+        link: 'http://event.zkjin.com/insurance/insurance-consultant-h5.html',
+        imgUrl: 'http://event.zkjin.com/insurance/event.jpg',
         success: function () {
-          console.log("share OK");
+          console.log("It's shared.");
         },
         cancel: function () {
-          console.log("share Cancel");
+          console.log("Share is cancel.");
         }
       });
 
