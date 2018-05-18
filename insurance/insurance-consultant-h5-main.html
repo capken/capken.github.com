@@ -23,6 +23,7 @@
     <script src="js/flexible.js"></script>
     <script type="text/javascript" src="./js/jquery.js"></script>
     <link href="./css/swiper.css" rel="stylesheet">
+    <link href="./css/animate.css" rel="stylesheet">
     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script src="http://206.189.158.85:8080/wechat.init.js"></script>
     <script>
@@ -64,48 +65,131 @@
             console.log("Error:" + res);
         });
     </script>
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+        }
+
+        .swiper-container {
+            height: 100%;
+        }
+
+        .swiper-slide {
+            height: auto;
+            width: auto;
+            bottom: 0%;
+            top: 0%;
+            color: #ffffff;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .swiper-slide img {
+            width: 75%;
+            margin-top: 20%;
+        }
+
+        .swiper-slide p {
+            margin-top: 74px;
+            height: 69px;
+        }
+
+        .qrContent {
+            height: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -25%);
+        }
+
+        .qrContent p {
+            margin: 0 auto;
+        }
+
+        .qrContent img {
+            margin-top: 34px;
+            margin-bottom: 22px;
+            height: 147px;
+            width: 147px;
+        }
     </style>
 </head>
 
 <body style="margin: 0; padding: 0">
-    <noscript>This is your fallback content in case JavaScript fails to load.</noscript>
-    <div class="page-layout">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img width="100%" src="img/page1.png" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="100%" src="img/page2.png" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="100%" src="img/page3.png" />
-                </div>
-                <div class="swiper-slide">
-                    <img width="100%" src="img/page4.png" />
-                </div>
-                <div class="swiper-slide">
-                    <img id="qrCode" width="100%" src="img/page5.png" />
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-color:#3a6dc4">
+                <img src="img/page1.png" />
+                <p class="ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                    凌晨四点，没睡的除了科比，还有我们
+                    <br>程序员！
+                </p>
+            </div>
+            <div class="swiper-slide" style="background-color:#f6b72f">
+                <img src="img/page2.png" />
+                <p class="ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                    作为时代的开拓者，我们只想用编程
+                    <br>使这个世界变得更美好~
+                </p>
+            </div>
+            <div class="swiper-slide" style="background-color:#0e5dd0">
+                <img src="img/page3.png" />
+                <p class="ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                    但是，实现梦想的道路总是曲折又漫长，
+                    <br>风险更无处不在
+                </p>
+            </div>
+            <div class="swiper-slide" style="background-color:#f03053">
+                <img src="img/page4.png" />
+                <p class="ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                    所以时代的开拓者们，快跨出你们
+                    <br>风险防范的第一步
+                </p>
+            </div>
+            <div class="swiper-slide" style="background-color: #3b4479">
+                <div class="qrContent">
+                    <p style="font-size: 18px;height: 50px" class="ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                        长按识别
+                        <br>免费领取智能保险方案
+                    </p>
+                    <img id="qrCode" src="img/WechatIMG41.jpeg" />
+                    <p style="font-size: 10px; color: #8891C9; height: 22px;" class="ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s"
+                        swiper-animate-delay="0.3s">
+                        保呗++，关心保险，更关心你
+                    </p>
                 </div>
             </div>
         </div>
+        <div class="swiper-pagination"></div>
         <div class="swiper-button-prev" style="color:gray"></div>
         <div class="swiper-button-next" style="color:gray"></div>
 
         <script src="js/swiper.min.js"></script>
+        <script src="js/swiper.animate.min.js"></script>
 
         <!-- Initialize Swiper -->
         <script>
             var mySwiper = new Swiper('.swiper-container', {
                 // loop: true,
-
+                on: {
+                    init: function () {
+                        swiperAnimateCache(this); //隐藏动画元素 
+                        swiperAnimate(this); //初始化完成开始动画
+                    },
+                    slideChangeTransitionEnd: function () {
+                        swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+                    }
+                },
                 // 如果需要前进后退按钮
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
-                lazy: {
-                    loadPrevNext: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
                 }
             })        
         </script>
