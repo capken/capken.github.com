@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>整形美容意外险</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/swiper.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+    <style>
+        @media print {
+            #ghostery-purple-box {
+                display: none !important
+            }
+        }
+
+        .swiper-container {
+            width: 100%;
+            padding-top: 0px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 260px;
+            height: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form-signin">
+        <div class="row">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px">
+            <div class="col-sm-12">
+                <button class="btn btn-lg btn-primary btn-block" type="button" onclick="buy()">去购买</button>
+            </div>
+        </div>
+
+    </form>
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/popper.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootbox.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script>
+
+        var data = [
+            {
+                "title": "眼部整形美容意外险",
+                "url": "https://emcs.pa18.com/product/g_tuanyi/index.html?appType=01&key=11805290000000133554",
+                "img": "img/eye.jpg",
+                "description": "美容意外伤害险，为您的美丽保驾护航"
+            },
+            {
+                "title": "吸脂整形美容意外险",
+                "url": "https://emcs.pa18.com/product/g_tuanyi/index.html?appType=01&key=11805290000000133555",
+                "img": "img/fat.jpg",
+                "description": "修身360°无死角，你只负责美"
+            },
+            {
+                "title": "鼻部整形意外险",
+                "url": "https://emcs.pa18.com/product/g_tuanyi/index.html?appType=01&key=11805290000000133556",
+                "img": "img/nose.jpg",
+                "description": "专业打造美鼻，从此美起来"
+            },
+            {
+                "title": "颌面整形意外险",
+                "url": "https://emcs.pa18.com/product/g_tuanyi/index.html?appType=01&key=11805290000000133557",
+                "img": "img/face.jpg",
+                "description": "医美险，美丽的时候增加一份保障"
+            },
+            {
+                "title": "乳房整形意外险",
+                "url": "https://emcs.pa18.com/product/g_tuanyi/index.html?appType=01&key=11805290000000133558",
+                "img": "img/breast.jpg",
+                "description": "专为美丽护航，医美险，我看行"
+            }
+        ];
+
+        var swiperHTML = "";
+        $.each(data, function (index, product) {
+            swiperHTML += '<div class="swiper-slide" style="background-image:url(' + product.img + ')"></div>';
+        });
+        $(".swiper-wrapper").html(swiperHTML);
+
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            on: {
+                slideChangeTransitionEnd: function () {
+                    $(".card-body .card-title").text(data[this.activeIndex].title);
+                    $(".card-body .card-text").text(data[this.activeIndex].description);
+                }
+            }
+        });
+
+        $(".card-body .card-title").text(data[0].title);
+        $(".card-body .card-text").text(data[0].description);
+
+        $.urlParam = function (name) {
+            var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href);
+            if (results == null) {
+                return null;
+            }
+            else {
+                return results[1] || 0;
+            }
+        }
+
+        function buy() {
+            window.location.href = data[swiper.activeIndex].url + '&mobile=' + $.urlParam("mobile");
+        }
+
+    </script>
+</body>
+
+</html>
