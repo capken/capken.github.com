@@ -4,14 +4,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <title>整形美容意外险</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/swiper.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
@@ -21,7 +21,6 @@
                 display: none !important
             }
         }
-
 
         .swiper-container {
             width: 100%;
@@ -33,7 +32,7 @@
             background-position: center;
             background-size: cover;
             width: 345px;
-            height: 400px;
+            height: 350px;
         }
     </style>
 </head>
@@ -54,6 +53,11 @@
             <label for="mobile">请输入手机号码</label>
         </div>
 
+        <div class="form-label-group">
+            <input type="tel" pattern="[0-9]*" id="mobileCheck" class="form-control" placeholder="请确认手机号码" required="" autofocus="" data-com.agilebits.onepassword.user-edited="yes">
+            <label for="mobileCheck">请确认手机号码</label>
+        </div>
+
 
         <div class="form-group">
             <button class="btn btn-lg btn-primary btn-block" type="button" onclick="generateQRCode()">生成二维码</button>
@@ -66,10 +70,10 @@
     </form>
 
 
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/popper.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/qrcode.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/qrcode.min.js"></script>
     <script type="text/javascript" src="js/bootbox.min.js"></script>
     <script type="text/javascript" src="js/swiper.min.js"></script>
     <script>
@@ -120,10 +124,10 @@
         function generateQRCode() {
             var blockDiv = $(".main-mask-claim");
             if (blockDiv.is(":hidden")) {
-                if (!$("#mobile").val()) {
+                if (!$("#mobile").val() || !$("#mobileCheck").val()) {
                     return bootbox.alert({
-                        message: "请输入手机号码",
-                        buttons:{
+                        message: "请将手机号码录入完整",
+                        buttons: {
                             ok: {
                                 label: '关闭'
                             }
@@ -132,10 +136,10 @@
                 }
 
                 var mobileReg = /^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/;
-                if(!$("#mobile").val().match(mobileReg)){
+                if (!$("#mobile").val().match(mobileReg) || !$("#mobileCheck").val().match(mobileReg)) {
                     return bootbox.alert({
                         message: "手机号不符合规范，请检查",
-                        buttons:{
+                        buttons: {
                             ok: {
                                 label: '关闭'
                             }
@@ -143,40 +147,41 @@
                     });
                 }
 
-                bootbox.confirm({
-                    size: "small",
-                    message: "确认手机号填写正确吗？",
-                    buttons: {
-                        confirm: {
-                            label: '确认',
-                        },
-                        cancel: {
-                            label: '取消',
-                        }
-                    },
-                    callback: function (result) {
-                        /* result is a boolean; true = OK, false = Cancel*/
-                        if (result) {
-
-                            var url = window.location.href.replace("index.html", "product.html");
-                            if (url.indexOf("?") == -1) {
-                                url += "?mobile=" + $("#mobile").val();
-                            } else {
-                                url += "&mobile=" + $("#mobile").val();
+                if ($("#mobile").val() !== $("#mobileCheck").val()) {
+                    return bootbox.alert({
+                        message: "两次手机号码输入不一致，请确认",
+                        buttons: {
+                            ok: {
+                                label: '关闭'
                             }
-                            qrcode.clear(); // clear the code.
-                            qrcode.makeCode(url);
-                            blockDiv.show();
                         }
-                    }
-                })
+                    });
+                }
+
+                var url = window.location.href.replace("index.html", "product.html");
+                if (url.indexOf("?") == -1) {
+                    url += "?encryptKey=" + encode($("#mobile").val());
+                } else {
+                    url += "&encryptKey=" + encode($("#mobile").val());
+                }
+                qrcode.clear(); // clear the code.
+                qrcode.makeCode(url);
+                blockDiv.show();
+
             } else {
                 blockDiv.hide();
             }
-
         }
 
+        var pwdMatrix = {"encode":{"0":"c","1":"f","2":"n","3":"q","4":"v","5":"a","6":"u","7":"r","8":"b","9":"l",}};
 
+        function encode(mobile) {
+            var encodeStr = "";
+            for (var i = 0; i < mobile.length; i++) {
+                encodeStr += pwdMatrix.encode[mobile.substring(i, i + 1)];
+            }
+            return encodeStr;
+        }
 
     </script>
 </body>
