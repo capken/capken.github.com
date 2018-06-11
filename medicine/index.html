@@ -35,26 +35,19 @@
             height: 350px;
         }
 
-        .alert {
+        #alertDiv {
             position: fixed;
             z-index: 99999;
             width: 100%;
             top: 0;
         }
-        .alert label{
-           margin: 0;
-           padding: 0;
-        }
     </style>
 </head>
 
 <body>
-    <div class="alert alert-danger alert-dismissible fade" role="alert">
-        <label></label>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+    <div id="alertDiv">
     </div>
+
     <form class="form-signin">
 
         <div class="swiper-container">
@@ -180,11 +173,16 @@
         }
 
         function alertMsg(message) {
-            $(".alert label").text(message);
-            $(".alert").addClass("show");
-            // window.setTimeout(function () {
-            //     $(".alert").removeClass("show");
-            // }, 2000);
+            var alertHtml = '<div class="alert alert-danger alert-dismissible fade show" role="alert">' + message +
+                                '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+                                '<span aria-hidden="true">&times;</span>' +
+                                '</button>' + 
+                            '</div>';
+
+            $("#alertDiv").html(alertHtml);
+            window.setTimeout(function () {
+                $(".alert").alert("close");
+            }, 2000);
         }
 
     </script>
