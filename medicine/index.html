@@ -34,10 +34,27 @@
             width: 345px;
             height: 350px;
         }
+
+        .alert {
+            position: absolute;
+            z-index: 99999;
+            width: 100%;
+            top: 0;
+        }
+        .alert label{
+           margin: 0;
+           padding: 0;
+        }
     </style>
 </head>
 
 <body>
+    <div class="alert alert-danger alert-dismissible fade" role="alert">
+        <label></label>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
     <form class="form-signin">
 
         <div class="swiper-container">
@@ -54,7 +71,7 @@
         </div>
 
         <div class="form-label-group">
-            <input type="tel" pattern="[0-9]*" id="mobileCheck" class="form-control" placeholder="请确认手机号码" required="" autofocus="" data-com.agilebits.onepassword.user-edited="yes">
+            <input type="tel" pattern="[0-9]*" id="mobileCheck" class="form-control" placeholder="请确认手机号码" required="" data-com.agilebits.onepassword.user-edited="yes">
             <label for="mobileCheck">请确认手机号码</label>
         </div>
 
@@ -125,37 +142,16 @@
             var blockDiv = $(".main-mask-claim");
             if (blockDiv.is(":hidden")) {
                 if (!$("#mobile").val() || !$("#mobileCheck").val()) {
-                    return bootbox.alert({
-                        message: "请将手机号码录入完整",
-                        buttons: {
-                            ok: {
-                                label: '关闭'
-                            }
-                        }
-                    });
+                    return alertMsg("请将手机号填写完整");
                 }
 
                 var mobileReg = /^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/;
                 if (!$("#mobile").val().match(mobileReg) || !$("#mobileCheck").val().match(mobileReg)) {
-                    return bootbox.alert({
-                        message: "手机号不符合规范，请检查",
-                        buttons: {
-                            ok: {
-                                label: '关闭'
-                            }
-                        }
-                    });
+                    return alertMsg("手机号不符合规范，请检查");
                 }
 
                 if ($("#mobile").val() !== $("#mobileCheck").val()) {
-                    return bootbox.alert({
-                        message: "两次手机号码输入不一致，请确认",
-                        buttons: {
-                            ok: {
-                                label: '关闭'
-                            }
-                        }
-                    });
+                    return alertMsg("两次手机号码输入不一致，请确认");
                 }
 
                 var url = window.location.href.replace("index.html", "product.html");
@@ -173,7 +169,7 @@
             }
         }
 
-        var pwdMatrix = {"encode":{"0":"c","1":"f","2":"n","3":"q","4":"v","5":"a","6":"u","7":"r","8":"b","9":"l",}};
+        var pwdMatrix = { "encode": { "0": "c", "1": "f", "2": "n", "3": "q", "4": "v", "5": "a", "6": "u", "7": "r", "8": "b", "9": "l", } };
 
         function encode(mobile) {
             var encodeStr = "";
@@ -181,6 +177,14 @@
                 encodeStr += pwdMatrix.encode[mobile.substring(i, i + 1)];
             }
             return encodeStr;
+        }
+
+        function alertMsg(message) {
+            $(".alert label").text(message);
+            $(".alert").addClass("show");
+            window.setTimeout(function () {
+                $(".alert").removeClass("show");
+            }, 2000);
         }
 
     </script>
