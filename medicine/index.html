@@ -36,7 +36,7 @@
         }
 
         .alert {
-            position: absolute;
+            position: fixed;
             z-index: 99999;
             width: 100%;
             top: 0;
@@ -182,9 +182,9 @@
         function alertMsg(message) {
             $(".alert label").text(message);
             $(".alert").addClass("show");
-            window.setTimeout(function () {
-                $(".alert").removeClass("show");
-            }, 2000);
+            // window.setTimeout(function () {
+            //     $(".alert").removeClass("show");
+            // }, 2000);
         }
 
     </script>
