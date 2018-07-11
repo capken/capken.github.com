@@ -19,7 +19,7 @@
       sessionStorage.setItem('accessToken', accessToken);
       sessionStorage.setItem('openId', getQueryStringValue('openid'));
       var url = window.location.href;
-      var appHomeUrl = url.replace(/wechat\.html.*$/, '');
+      var appHomeUrl = url.replace(/wechat\.html.*$/, 'index.html');
       window.location.href = appHomeUrl;
     }
   </script>
